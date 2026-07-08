@@ -1046,23 +1046,239 @@
 
         </div>
 
-        <!-- Before After Slider -->
-        <div class="before-after-section reveal">
-          <h3 class="text-center section-title" style="font-size:1.5rem; margin-bottom:1rem;">
-            The <span>Dattu Difference</span> &mdash; Before &amp; After
-          </h3>
-          <p class="text-center" style="color:var(--clr-muted); margin-bottom:2rem; font-size:0.9rem;">Drag the slider to see the transformation</p>
+      </div>
+    </section>
 
-          <div class="ba-container" id="ba-slider" role="img" aria-label="Before and after comparison of painting work">
-            <div class="ba-before"></div>
-            <div class="ba-after" id="ba-after"></div>
-            <div class="ba-handle" id="ba-handle">
-              <div class="ba-handle-circle">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M8 4l-4 8 4 8M16 4l4 8-4 8"/></svg>
+    <!-- ============================================================
+         BEFORE & AFTER SHOWCASE
+         ============================================================ -->
+    <section id="before-after-gallery" class="section-pad ba-section" aria-labelledby="ba-gallery-heading">
+      <div class="container">
+        <header class="section-header text-center reveal">
+          <div class="badge badge-primary">Transformations</div>
+          <h2 class="section-title" id="ba-gallery-heading">
+            Before &amp; After <span>Transformations</span>
+          </h2>
+          <p class="section-subtitle" style="margin:0 auto;">
+            See how we transform old, faded, and damaged properties into beautiful, durable, and modern spaces.
+          </p>
+        </header>
+
+        <!-- Category Filters -->
+        <div class="ba-filters reveal">
+          <button class="ba-filter-btn active" data-filter="all">All</button>
+          <button class="ba-filter-btn" data-filter="interior">Interior Painting</button>
+          <button class="ba-filter-btn" data-filter="exterior">Exterior Painting</button>
+          <button class="ba-filter-btn" data-filter="waterproofing">Waterproofing</button>
+          <button class="ba-filter-btn" data-filter="terrace-waterproofing">Terrace Waterproofing</button>
+          <button class="ba-filter-btn" data-filter="commercial">Commercial</button>
+          <button class="ba-filter-btn" data-filter="industrial">Industrial</button>
+          <button class="ba-filter-btn" data-filter="house">House Painting</button>
+          <button class="ba-filter-btn" data-filter="villa">Villa Painting</button>
+          <button class="ba-filter-btn" data-filter="office">Office Painting</button>
+          <button class="ba-filter-btn" data-filter="society">Society Painting</button>
+        </div>
+
+        <!-- Before After Grid -->
+        <div class="ba-grid reveal" id="ba-grid">
+
+          <!-- Card 1: Modern Living Room -->
+          <article class="ba-card" data-categories="interior house">
+            <div class="ba-slider-container">
+              <div class="ba-image-wrapper">
+                <img src="images/interior_painting.png" alt="Before Interior House Painting in Nashik" class="ba-img ba-before-img" loading="lazy" />
+              </div>
+              <div class="ba-image-wrapper ba-after-img">
+                <img src="images/interior_painting.png" alt="After Interior House Painting in Nashik" class="ba-img" loading="lazy" />
+              </div>
+              <div class="ba-handle"></div>
+              <div class="ba-handle-circle"></div>
+              <span class="ba-label ba-label-before">Before</span>
+              <span class="ba-label ba-label-after">After</span>
+            </div>
+            <div class="ba-info">
+              <div class="ba-meta">
+                <span class="ba-service-badge">Interior Painting</span>
+                <span class="ba-location">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Nashik
+                </span>
+              </div>
+              <h3 class="ba-title">Modern Living Room</h3>
+              <p class="ba-desc">Faded, scuffed walls transformed into a luxury living room using premium matte finish paint. Features a stunning deep teal accent wall.</p>
+              <div class="ba-footer">
+                <span class="ba-year">Completed: 2025</span>
+                <a href="#quote" class="btn-ba-cta">Get Similar Results &rarr;</a>
               </div>
             </div>
-            <span class="ba-label ba-label-before">Before</span>
-            <span class="ba-label ba-label-after">After</span>
+          </article>
+
+          <!-- Card 2: Exterior Villa -->
+          <article class="ba-card" data-categories="exterior villa">
+            <div class="ba-slider-container">
+              <div class="ba-image-wrapper">
+                <img src="images/hero_painting.png" alt="Before Exterior Villa Painting in Nashik" class="ba-img ba-before-img" loading="lazy" />
+              </div>
+              <div class="ba-image-wrapper ba-after-img">
+                <img src="images/hero_painting.png" alt="After Exterior Villa Painting in Nashik" class="ba-img" loading="lazy" />
+              </div>
+              <div class="ba-handle"></div>
+              <div class="ba-handle-circle"></div>
+              <span class="ba-label ba-label-before">Before</span>
+              <span class="ba-label ba-label-after">After</span>
+            </div>
+            <div class="ba-info">
+              <div class="ba-meta">
+                <span class="ba-service-badge">Exterior Painting</span>
+                <span class="ba-location">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Nashik
+                </span>
+              </div>
+              <h3 class="ba-title">Exterior Villa Painting</h3>
+              <p class="ba-desc">Revitalized weather-beaten exterior walls. Repaired fine plaster cracks and applied high-durability weather-proof silicone protective paint.</p>
+              <div class="ba-footer">
+                <span class="ba-year">Completed: 2024</span>
+                <a href="#quote" class="btn-ba-cta">Get Similar Results &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Terrace Waterproofing -->
+          <article class="ba-card" data-categories="waterproofing terrace-waterproofing house">
+            <div class="ba-slider-container">
+              <div class="ba-image-wrapper">
+                <img src="images/waterproofing_section.png" alt="Before Terrace Waterproofing Transformation in Nashik" class="ba-img ba-before-img" loading="lazy" />
+              </div>
+              <div class="ba-image-wrapper ba-after-img">
+                <img src="images/waterproofing_section.png" alt="After Terrace Waterproofing Transformation in Nashik" class="ba-img" loading="lazy" />
+              </div>
+              <div class="ba-handle"></div>
+              <div class="ba-handle-circle"></div>
+              <span class="ba-label ba-label-before">Before</span>
+              <span class="ba-label ba-label-after">After</span>
+            </div>
+            <div class="ba-info">
+              <div class="ba-meta">
+                <span class="ba-service-badge">Waterproofing</span>
+                <span class="ba-location">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Nashik
+                </span>
+              </div>
+              <h3 class="ba-title">Terrace Waterproofing</h3>
+              <p class="ba-desc">Resolved severe water leakage on a residential terrace. Applied a multi-layer elastomeric waterproofing membrane with a 5-year warranty.</p>
+              <div class="ba-footer">
+                <span class="ba-year">Completed: 2025</span>
+                <a href="#quote" class="btn-ba-cta">Get Similar Results &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Commercial Office -->
+          <article class="ba-card" data-categories="commercial office interior">
+            <div class="ba-slider-container">
+              <div class="ba-image-wrapper">
+                <img src="images/about_team.png" alt="Before Commercial Office Painting in Nashik" class="ba-img ba-before-img" loading="lazy" />
+              </div>
+              <div class="ba-image-wrapper ba-after-img">
+                <img src="images/about_team.png" alt="After Commercial Office Painting in Nashik" class="ba-img" loading="lazy" />
+              </div>
+              <div class="ba-handle"></div>
+              <div class="ba-handle-circle"></div>
+              <span class="ba-label ba-label-before">Before</span>
+              <span class="ba-label ba-label-after">After</span>
+            </div>
+            <div class="ba-info">
+              <div class="ba-meta">
+                <span class="ba-service-badge">Office Painting</span>
+                <span class="ba-location">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Nashik
+                </span>
+              </div>
+              <h3 class="ba-title">Commercial Office</h3>
+              <p class="ba-desc">Repainted open-plan corporate office. Cleaned surfaces, applied low-VOC odor-free satin finish to improve interior lighting and productivity.</p>
+              <div class="ba-footer">
+                <span class="ba-year">Completed: 2024</span>
+                <a href="#quote" class="btn-ba-cta">Get Similar Results &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5: Industrial Shed -->
+          <article class="ba-card" data-categories="industrial commercial">
+            <div class="ba-slider-container">
+              <div class="ba-image-wrapper">
+                <img src="images/exterior_painting.png" alt="Before Industrial Shed Protection in Nashik" class="ba-img ba-before-img" loading="lazy" />
+              </div>
+              <div class="ba-image-wrapper ba-after-img">
+                <img src="images/exterior_painting.png" alt="After Industrial Shed Protection in Nashik" class="ba-img" loading="lazy" />
+              </div>
+              <div class="ba-handle"></div>
+              <div class="ba-handle-circle"></div>
+              <span class="ba-label ba-label-before">Before</span>
+              <span class="ba-label ba-label-after">After</span>
+            </div>
+            <div class="ba-info">
+              <div class="ba-meta">
+                <span class="ba-service-badge">Industrial Painting</span>
+                <span class="ba-location">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Nashik
+                </span>
+              </div>
+              <h3 class="ba-title">Industrial Shed</h3>
+              <p class="ba-desc">Applied anti-corrosion protective coatings to structural steel beams and repainted metal roof panels to prevent rust and degradation.</p>
+              <div class="ba-footer">
+                <span class="ba-year">Completed: 2023</span>
+                <a href="#quote" class="btn-ba-cta">Get Similar Results &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6: Housing Society -->
+          <article class="ba-card" data-categories="exterior society commercial">
+            <div class="ba-slider-container">
+              <div class="ba-image-wrapper">
+                <img src="images/texture_painting.png" alt="Before Housing Society Exterior Painting in Nashik" class="ba-img ba-before-img" loading="lazy" />
+              </div>
+              <div class="ba-image-wrapper ba-after-img">
+                <img src="images/texture_painting.png" alt="After Housing Society Exterior Painting in Nashik" class="ba-img" loading="lazy" />
+              </div>
+              <div class="ba-handle"></div>
+              <div class="ba-handle-circle"></div>
+              <span class="ba-label ba-label-before">Before</span>
+              <span class="ba-label ba-label-after">After</span>
+            </div>
+            <div class="ba-info">
+              <div class="ba-meta">
+                <span class="ba-service-badge">Society Painting</span>
+                <span class="ba-location">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Nashik
+                </span>
+              </div>
+              <h3 class="ba-title">Housing Society Exterior</h3>
+              <p class="ba-desc">Complete exterior painting of a multi-story cooperative housing society. Repaired structural cracks, primed, and coated with dust-resistant paint.</p>
+              <div class="ba-footer">
+                <span class="ba-year">Completed: 2025</span>
+                <a href="#quote" class="btn-ba-cta">Get Similar Results &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- CTA Showcase Box -->
+        <div class="ba-cta-box reveal">
+          <h3 class="ba-cta-title">Want Your Property to Look Like This?</h3>
+          <p class="ba-cta-desc">Get in touch with Nashik's trusted painting &amp; waterproofing experts. Schedule a free site visit today!</p>
+          <div class="ba-cta-buttons">
+            <a href="#quote" class="btn btn-accent">Book Free Site Visit</a>
+            <a href="#quote" class="btn btn-secondary">Request Free Quote</a>
+            <a href="tel:+919823125583" class="btn btn-call">&#128222; Call Now</a>
+            <a href="https://wa.me/919823125583" class="btn btn-whatsapp" target="_blank" rel="noopener">&#128172; WhatsApp</a>
           </div>
         </div>
 

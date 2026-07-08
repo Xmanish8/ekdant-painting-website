@@ -1046,23 +1046,239 @@
 
         </div>
 
-        <!-- Before After Slider -->
-        <div class="before-after-section reveal">
-          <h3 class="text-center section-title" style="font-size:1.5rem; margin-bottom:1rem;">
-            आमचे काम &mdash; आधी आणि नंतर
-          </h3>
-          <p class="text-center" style="color:var(--clr-muted); margin-bottom:2rem; font-size:0.9rem;">Drag the slider to see the transformation</p>
+      </div>
+    </section>
 
-          <div class="ba-container" id="ba-slider" role="img" aria-label="Before and after comparison of painting work">
-            <div class="ba-before"></div>
-            <div class="ba-after" id="ba-after"></div>
-            <div class="ba-handle" id="ba-handle">
-              <div class="ba-handle-circle">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M8 4l-4 8 4 8M16 4l4 8-4 8"/></svg>
+    <!-- ============================================================
+         BEFORE & AFTER SHOWCASE (कामापूर्वी आणि कामानंतरचा बदल)
+         ============================================================ -->
+    <section id="before-after-gallery" class="section-pad ba-section" aria-labelledby="ba-gallery-heading">
+      <div class="container">
+        <header class="section-header text-center reveal">
+          <div class="badge badge-primary">रुपांतरण</div>
+          <h2 class="section-title" id="ba-gallery-heading">
+            कामापूर्वी आणि <span>कामानंतरचा बदल</span>
+          </h2>
+          <p class="section-subtitle" style="margin:0 auto;">
+            आमच्या व्यावसायिक पेंटिंग आणि वॉटरप्रूफिंग सेवांमुळे झालेला उल्लेखनीय बदल अनुभवा.
+          </p>
+        </header>
+
+        <!-- Category Filters -->
+        <div class="ba-filters reveal">
+          <button class="ba-filter-btn active" data-filter="all">सर्व</button>
+          <button class="ba-filter-btn" data-filter="interior">अंतर्गत रंगकाम</button>
+          <button class="ba-filter-btn" data-filter="exterior">बाह्य रंगकाम</button>
+          <button class="ba-filter-btn" data-filter="waterproofing">वॉटरप्रूफिंग</button>
+          <button class="ba-filter-btn" data-filter="terrace-waterproofing">टेरेस वॉटरप्रूफिंग</button>
+          <button class="ba-filter-btn" data-filter="commercial">व्यावसायिक</button>
+          <button class="ba-filter-btn" data-filter="industrial">औद्योगिक</button>
+          <button class="ba-filter-btn" data-filter="house">घर रंगकाम</button>
+          <button class="ba-filter-btn" data-filter="villa">व्हिला रंगकाम</button>
+          <button class="ba-filter-btn" data-filter="office">ऑफिस रंगकाम</button>
+          <button class="ba-filter-btn" data-filter="society">सोसायटी रंगकाम</button>
+        </div>
+
+        <!-- Before After Grid -->
+        <div class="ba-grid reveal" id="ba-grid">
+
+          <!-- Card 1: Modern Living Room -->
+          <article class="ba-card" data-categories="interior house">
+            <div class="ba-slider-container">
+              <div class="ba-image-wrapper">
+                <img src="../images/interior_painting.png" alt="Before Interior House Painting in Nashik" class="ba-img ba-before-img" loading="lazy" />
+              </div>
+              <div class="ba-image-wrapper ba-after-img">
+                <img src="../images/interior_painting.png" alt="After Interior House Painting in Nashik" class="ba-img" loading="lazy" />
+              </div>
+              <div class="ba-handle"></div>
+              <div class="ba-handle-circle"></div>
+              <span class="ba-label ba-label-before">पूर्वी</span>
+              <span class="ba-label ba-label-after">नंतर</span>
+            </div>
+            <div class="ba-info">
+              <div class="ba-meta">
+                <span class="ba-service-badge">अंतर्गत रंगकाम</span>
+                <span class="ba-location">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  नाशिक
+                </span>
+              </div>
+              <h3 class="ba-title">मॉडर्न लिव्हिंग रूम</h3>
+              <p class="ba-desc">जुनाट आणि निस्तेज झालेल्या भिंतींना प्रीमियम मॅट फिनिश रंगाने एक आधुनिक आणि लक्झरी लूक दिला. यामध्ये आकर्षक अशा गडद निळ्या रंगाची (Teal accent wall) भिंत समाविष्ट आहे.</p>
+              <div class="ba-footer">
+                <span class="ba-year">पूर्ण वर्ष: २०२५</span>
+                <a href="#quote" class="btn-ba-cta">तसेच काम हवे आहे &rarr;</a>
               </div>
             </div>
-            <span class="ba-label ba-label-before">Before</span>
-            <span class="ba-label ba-label-after">After</span>
+          </article>
+
+          <!-- Card 2: Exterior Villa -->
+          <article class="ba-card" data-categories="exterior villa">
+            <div class="ba-slider-container">
+              <div class="ba-image-wrapper">
+                <img src="../images/hero_painting.png" alt="Before Exterior Villa Painting in Nashik" class="ba-img ba-before-img" loading="lazy" />
+              </div>
+              <div class="ba-image-wrapper ba-after-img">
+                <img src="../images/hero_painting.png" alt="After Exterior Villa Painting in Nashik" class="ba-img" loading="lazy" />
+              </div>
+              <div class="ba-handle"></div>
+              <div class="ba-handle-circle"></div>
+              <span class="ba-label ba-label-before">पूर्वी</span>
+              <span class="ba-label ba-label-after">नंतर</span>
+            </div>
+            <div class="ba-info">
+              <div class="ba-meta">
+                <span class="ba-service-badge">बाह्य रंगकाम</span>
+                <span class="ba-location">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  नाशिक
+                </span>
+              </div>
+              <h3 class="ba-title">व्हिला बाह्य रंगकाम</h3>
+              <p class="ba-desc">हवामानामुळे खराब झालेल्या बाह्य भिंतींचे पुनरुज्जीवन केले. भिंतींच्या बारीक तडे दुरुस्त करून त्यावर यांत्रिक सिलिकॉन वॉटर-प्रूफ संरक्षक रंग लावला.</p>
+              <div class="ba-footer">
+                <span class="ba-year">पूर्ण वर्ष: २०२४</span>
+                <a href="#quote" class="btn-ba-cta">तसेच काम हवे आहे &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Terrace Waterproofing -->
+          <article class="ba-card" data-categories="waterproofing terrace-waterproofing house">
+            <div class="ba-slider-container">
+              <div class="ba-image-wrapper">
+                <img src="../images/waterproofing_section.png" alt="Before Terrace Waterproofing Transformation in Nashik" class="ba-img ba-before-img" loading="lazy" />
+              </div>
+              <div class="ba-image-wrapper ba-after-img">
+                <img src="../images/waterproofing_section.png" alt="After Terrace Waterproofing Transformation in Nashik" class="ba-img" loading="lazy" />
+              </div>
+              <div class="ba-handle"></div>
+              <div class="ba-handle-circle"></div>
+              <span class="ba-label ba-label-before">पूर्वी</span>
+              <span class="ba-label ba-label-after">नंतर</span>
+            </div>
+            <div class="ba-info">
+              <div class="ba-meta">
+                <span class="ba-service-badge">वॉटरप्रूफिंग</span>
+                <span class="ba-location">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  नाशिक
+                </span>
+              </div>
+              <h3 class="ba-title">टेरेस वॉटरप्रूफिंग</h3>
+              <p class="ba-desc">निवासी इमारतीच्या छतावरील पाण्याचा तीव्र गळतीचा प्रश्न सोडवला. ५ वर्षांच्या वॉरंटीसह बहुस्तरीय इलास्टोमेरिक वॉटरप्रूफिंग कोटिंग लागू केले.</p>
+              <div class="ba-footer">
+                <span class="ba-year">पूर्ण वर्ष: २०२५</span>
+                <a href="#quote" class="btn-ba-cta">तसेच काम हवे आहे &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Commercial Office -->
+          <article class="ba-card" data-categories="commercial office interior">
+            <div class="ba-slider-container">
+              <div class="ba-image-wrapper">
+                <img src="../images/about_team.png" alt="Before Commercial Office Painting in Nashik" class="ba-img ba-before-img" loading="lazy" />
+              </div>
+              <div class="ba-image-wrapper ba-after-img">
+                <img src="../images/about_team.png" alt="After Commercial Office Painting in Nashik" class="ba-img" loading="lazy" />
+              </div>
+              <div class="ba-handle"></div>
+              <div class="ba-handle-circle"></div>
+              <span class="ba-label ba-label-before">पूर्वी</span>
+              <span class="ba-label ba-label-after">नंतर</span>
+            </div>
+            <div class="ba-info">
+              <div class="ba-meta">
+                <span class="ba-service-badge">ऑफिस रंगकाम</span>
+                <span class="ba-location">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  नाशिक
+                </span>
+              </div>
+              <h3 class="ba-title">व्यावसायिक ऑफिस</h3>
+              <p class="ba-desc">मोठ्या कॉर्पोरेट ऑफिसचे रंगकाम केले. भिंती स्वच्छ करून उत्पादकता वाढवण्यासाठी कमी वास असलेले आणि उत्तम प्रकाशासाठी पूरक असणारे सॅटिन फिनिश रंग लावले.</p>
+              <div class="ba-footer">
+                <span class="ba-year">पूर्ण वर्ष: २०२४</span>
+                <a href="#quote" class="btn-ba-cta">तसेच काम हवे आहे &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5: Industrial Shed -->
+          <article class="ba-card" data-categories="industrial commercial">
+            <div class="ba-slider-container">
+              <div class="ba-image-wrapper">
+                <img src="../images/exterior_painting.png" alt="Before Industrial Shed Protection in Nashik" class="ba-img ba-before-img" loading="lazy" />
+              </div>
+              <div class="ba-image-wrapper ba-after-img">
+                <img src="../images/exterior_painting.png" alt="After Industrial Shed Protection in Nashik" class="ba-img" loading="lazy" />
+              </div>
+              <div class="ba-handle"></div>
+              <div class="ba-handle-circle"></div>
+              <span class="ba-label ba-label-before">पूर्वी</span>
+              <span class="ba-label ba-label-after">नंतर</span>
+            </div>
+            <div class="ba-info">
+              <div class="ba-meta">
+                <span class="ba-service-badge">औद्योगिक रंगकाम</span>
+                <span class="ba-location">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  नाशिक
+                </span>
+              </div>
+              <h3 class="ba-title">औद्योगिक शेड रंगकाम</h3>
+              <p class="ba-desc">लोखंडी खांबांवर गंज-प्रतिरोधक संरक्षक कोटिंग्ज लावले आणि छताच्या पत्रांचे गंजणे रोखण्यासाठी विशेष रंग लावला.</p>
+              <div class="ba-footer">
+                <span class="ba-year">पूर्ण वर्ष: २०२३</span>
+                <a href="#quote" class="btn-ba-cta">तसेच काम हवे आहे &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6: Housing Society -->
+          <article class="ba-card" data-categories="exterior society commercial">
+            <div class="ba-slider-container">
+              <div class="ba-image-wrapper">
+                <img src="../images/texture_painting.png" alt="Before Housing Society Exterior Painting in Nashik" class="ba-img ba-before-img" loading="lazy" />
+              </div>
+              <div class="ba-image-wrapper ba-after-img">
+                <img src="../images/texture_painting.png" alt="After Housing Society Exterior Painting in Nashik" class="ba-img" loading="lazy" />
+              </div>
+              <div class="ba-handle"></div>
+              <div class="ba-handle-circle"></div>
+              <span class="ba-label ba-label-before">पूर्वी</span>
+              <span class="ba-label ba-label-after">नंतर</span>
+            </div>
+            <div class="ba-info">
+              <div class="ba-meta">
+                <span class="ba-service-badge">सोसायटी रंगकाम</span>
+                <span class="ba-location">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  नाशिक
+                </span>
+              </div>
+              <h3 class="ba-title">हाउसिंग सोसायटी बाह्य रंगकाम</h3>
+              <p class="ba-desc">बहुमजली सहकारी गृहनिर्माण सोसायटीचे संपूर्ण बाह्य रंगकाम केले. इमारतीच्या संरचनात्मक तडे दुरुस्त करून धूळ-प्रतिरोधक रंग लावला.</p>
+              <div class="ba-footer">
+                <span class="ba-year">पूर्ण वर्ष: २०२५</span>
+                <a href="#quote" class="btn-ba-cta">तसेच काम हवे आहे &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- CTA Showcase Box -->
+        <div class="ba-cta-box reveal">
+          <h3 class="ba-cta-title">तुमचे घर किंवा इमारत अशीच सुंदर बनवायची आहे का?</h3>
+          <p class="ba-cta-desc">नाशिकमधील विश्वासू पेंटिंग आणि वॉटरप्रूफिंग तज्ज्ञांशी संपर्क साधा. आजच मोफत साइट भेटीची वेळ निश्चित करा!</p>
+          <div class="ba-cta-buttons">
+            <a href="#quote" class="btn btn-accent">मोफत साइट भेट बुक करा</a>
+            <a href="#quote" class="btn btn-secondary">मोफत अंदाजपत्रक मिळवा</a>
+            <a href="tel:+919823125583" class="btn btn-call">&#128222; कॉल करा</a>
+            <a href="https://wa.me/919823125583" class="btn btn-whatsapp" target="_blank" rel="noopener">&#128172; व्हॉट्सअॅप</a>
           </div>
         </div>
 

@@ -388,34 +388,116 @@ function closeLightbox() {
 }
 
 /* ============================================================
-   BEFORE / AFTER SLIDER
+   BEFORE / AFTER SLIDER GRID LOGIC
    ============================================================ */
-const baSlider = document.getElementById('ba-slider');
-const baAfter  = document.getElementById('ba-after');
-const baHandle = document.getElementById('ba-handle');
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.ba-slider-container').forEach(slider => {
+    const handle = slider.querySelector('.ba-handle');
+    const handleCircle = slider.querySelector('.ba-handle-circle');
+    const afterImg = slider.querySelector('.ba-after-img');
+    let isDragging = false;
 
-if (baSlider && baAfter && baHandle) {
-  let isDragging = false;
+    const updateSplit = (clientX) => {
+      const rect = slider.getBoundingClientRect();
+      let position = (clientX - rect.left) / rect.width;
+      position = Math.max(0.01, Math.min(0.99, position));
+      
+      const percentage = position * 100;
+      afterImg.style.clipPath = `inset(0 0 0 ${percentage}%)`;
+      handle.style.left = `${percentage}%`;
+      if (handleCircle) {
+        handleCircle.style.left = `${percentage}%`;
+      }
+    };
 
-  const setPosition = (x) => {
-    const rect = baSlider.getBoundingClientRect();
-    let pct = (x - rect.left) / rect.width;
-    pct = Math.max(0.05, Math.min(0.95, pct));
-    const insetPct = (1 - pct) * 100;
-    baAfter.style.clipPath = `inset(0 0 0 ${pct * 100}%)`;
-    baHandle.style.left = `${pct * 100}%`;
-  };
+    // Mouse Events
+    slider.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      updateSplit(e.clientX);
+    });
 
-  // Mouse events
-  baSlider.addEventListener('mousedown', (e) => { isDragging = true; setPosition(e.clientX); });
-  window.addEventListener('mousemove',  (e) => { if (isDragging) setPosition(e.clientX); });
-  window.addEventListener('mouseup',    ()  => { isDragging = false; });
+    window.addEventListener('mousemove', (e) => {
+      if (isDragging) {
+        updateSplit(e.clientX);
+      }
+    });
 
-  // Touch events
-  baSlider.addEventListener('touchstart', (e) => { isDragging = true; setPosition(e.touches[0].clientX); }, { passive: true });
-  window.addEventListener('touchmove',   (e) => { if (isDragging) setPosition(e.touches[0].clientX); }, { passive: true });
-  window.addEventListener('touchend',    ()  => { isDragging = false; });
-}
+    window.addEventListener('mouseup', () => {
+      isDragging = false;
+    });
+
+    // Touch Events
+    slider.addEventListener('touchstart', (e) => {
+      isDragging = true;
+      updateSplit(e.touches[0].clientX);
+    }, { passive: true });
+
+    window.addEventListener('touchmove', (e) => {
+      if (isDragging) {
+        updateSplit(e.touches[0].clientX);
+      }
+    }, { passive: true });
+
+    window.addEventListener('touchend', () => {
+      isDragging = false;
+    });
+
+    // Keyboard Accessibility
+    slider.setAttribute('tabindex', '0');
+    
+    slider.addEventListener('keydown', (e) => {
+      let currentPercent = parseFloat(handle.style.left) || 50;
+      
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        currentPercent = Math.max(1, currentPercent - 5);
+        afterImg.style.clipPath = `inset(0 0 0 ${currentPercent}%)`;
+        handle.style.left = `${currentPercent}%`;
+        if (handleCircle) handleCircle.style.left = `${currentPercent}%`;
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        currentPercent = Math.min(99, currentPercent + 5);
+        afterImg.style.clipPath = `inset(0 0 0 ${currentPercent}%)`;
+        handle.style.left = `${currentPercent}%`;
+        if (handleCircle) handleCircle.style.left = `${currentPercent}%`;
+      }
+    });
+  });
+
+  /* ============================================================
+     BEFORE / AFTER CATEGORY FILTERING LOGIC
+     ============================================================ */
+  const filterButtons = document.querySelectorAll('.ba-filter-btn');
+  const projectCards = document.querySelectorAll('.ba-card');
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.getAttribute('data-filter');
+
+      projectCards.forEach(card => {
+        const categories = (card.getAttribute('data-categories') || '').split(' ');
+        if (filter === 'all' || categories.includes(filter)) {
+          card.classList.remove('hidden');
+          card.style.opacity = '1';
+          card.style.transform = 'scale(1) translateY(0)';
+          card.style.display = 'flex';
+        } else {
+          card.style.opacity = '0';
+          card.style.transform = 'scale(0.9) translateY(20px)';
+          setTimeout(() => {
+            if (card.style.opacity === '0') {
+              card.style.display = 'none';
+            }
+          }, 300);
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+});
 
 /* ============================================================
    QUOTE FORM SUBMISSION
