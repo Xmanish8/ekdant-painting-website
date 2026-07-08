@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /pages/thank-you.html
+
+Sitemap: https://ekdantpainting.in/sitemap.xml

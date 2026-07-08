@@ -1,0 +1,11 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D5C63"/>
+      <stop offset="100%" style="stop-color:#00C2CB"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="95" fill="url(#tealGrad)" stroke="#083D42" stroke-width="4"/>
+  <text x="100" y="110" font-family="serif" font-size="28" font-weight="700" fill="white" text-anchor="middle">EKDANT</text>
+  <text x="100" y="135" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.8)" text-anchor="middle">PAINTING CONTRACTOR</text>
+</svg>
