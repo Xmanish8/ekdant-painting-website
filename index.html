@@ -36,11 +36,26 @@
         localStorage.setItem('preferred_language', lang);
       }
       if (lang === 'mr' && !isMarathiPath) {
-        var newPath = window.location.origin + '/mr/' + window.location.hash;
-        window.location.replace(newPath);
+        if (window.location.protocol === 'file:') {
+          var currentPath = window.location.pathname;
+          var newPath = currentPath.replace(/index\.html$/, 'mr/index.html');
+          if (newPath === currentPath) {
+            newPath = currentPath + (currentPath.endsWith('/') ? '' : '/') + 'mr/index.html';
+          }
+          window.location.replace(newPath + window.location.hash);
+        } else {
+          var newPath = window.location.origin + '/mr/' + window.location.hash;
+          window.location.replace(newPath);
+        }
       } else if (lang === 'en' && isMarathiPath) {
-        var newPath = window.location.origin + '/' + window.location.hash;
-        window.location.replace(newPath);
+        if (window.location.protocol === 'file:') {
+          var currentPath = window.location.pathname;
+          var newPath = currentPath.replace(/mr\/index\.html$/, 'index.html').replace(/mr\/$/, '');
+          window.location.replace(newPath + window.location.hash);
+        } else {
+          var newPath = window.location.origin + '/' + window.location.hash;
+          window.location.replace(newPath);
+        }
       }
     })();
   </script>

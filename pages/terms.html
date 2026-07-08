@@ -25,11 +25,23 @@
         localStorage.setItem('preferred_language', lang);
       }
       if (lang === 'mr' && !isMarathiPath) {
-        var newPath = window.location.origin + '/mr/pages/terms.html' + window.location.hash;
-        window.location.replace(newPath);
+        if (window.location.protocol === 'file:') {
+          var currentPath = window.location.pathname;
+          var newPath = currentPath.replace(/\/pages\/terms\.html$/, '/mr/pages/terms.html');
+          window.location.replace(newPath + window.location.hash);
+        } else {
+          var newPath = window.location.origin + '/mr/pages/terms.html' + window.location.hash;
+          window.location.replace(newPath);
+        }
       } else if (lang === 'en' && isMarathiPath) {
-        var newPath = window.location.origin + '/pages/terms.html' + window.location.hash;
-        window.location.replace(newPath);
+        if (window.location.protocol === 'file:') {
+          var currentPath = window.location.pathname;
+          var newPath = currentPath.replace(/\/mr\/pages\/terms\.html$/, '/pages/terms.html');
+          window.location.replace(newPath + window.location.hash);
+        } else {
+          var newPath = window.location.origin + '/pages/terms.html' + window.location.hash;
+          window.location.replace(newPath);
+        }
       }
     })();
   </script>
