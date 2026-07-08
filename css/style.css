@@ -1435,3 +1435,130 @@ input, textarea, select { font-family: inherit; }
 #faq        { border-top: 4px solid transparent; border-image: var(--grad-accent) 1; }
 #blogs      { border-top: 4px solid transparent; border-image: var(--grad-pink) 1; }
 #contact    { border-top: 4px solid transparent; border-image: var(--grad-green) 1; }
+
+/* ============================================================
+   LANGUAGE SWITCHER
+   ============================================================ */
+.lang-switcher {
+  position: relative;
+  display: inline-block;
+  z-index: var(--z-above);
+  vertical-align: middle;
+}
+
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-base);
+  line-height: 1;
+}
+
+.lang-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+#navbar.scrolled .lang-btn {
+  background: rgba(22, 22, 58, 0.08);
+  border-color: rgba(22, 22, 58, 0.15);
+  color: #fff; /* Keep it readable against scrolled background */
+}
+
+#navbar.scrolled .lang-btn:hover {
+  background: rgba(22, 22, 58, 0.15);
+  border-color: rgba(22, 22, 58, 0.3);
+}
+
+.lang-flag {
+  font-size: 1rem;
+  line-height: 1;
+  display: inline-block;
+}
+
+.lang-btn .chevron {
+  width: 12px;
+  height: 12px;
+  transition: var(--transition-fast);
+  color: inherit;
+  stroke-width: 3;
+}
+
+.lang-switcher:hover .chevron,
+.lang-switcher.open .chevron {
+  transform: rotate(180deg);
+}
+
+.lang-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 140px;
+  background: rgba(22, 22, 58, 0.98);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(139, 43, 226, 0.25);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  padding: 6px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: var(--transition-base);
+}
+
+.lang-switcher:hover .lang-dropdown-menu,
+.lang-switcher.open .lang-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.lang-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-fast);
+  width: 100%;
+  text-align: left;
+}
+
+.lang-dropdown-item:hover {
+  background: rgba(255, 45, 122, 0.12);
+  color: var(--clr-secondary);
+}
+
+.lang-dropdown-item.active {
+  background: var(--grad-primary);
+  color: #fff;
+}
+
+/* Footer Lang Switcher specific styling */
+.footer-lang-switcher {
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.footer-lang-switcher .lang-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-lang-switcher .lang-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+

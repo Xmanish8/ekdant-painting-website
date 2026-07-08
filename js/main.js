@@ -646,3 +646,48 @@ filterBtns.forEach(btn => {
 document.addEventListener('DOMContentLoaded', () => {
   onScroll(); // Init scroll state
 });
+
+/* ============================================================
+   MULTILINGUAL LANGUAGE SWITCHER LOGIC
+   ============================================================ */
+document.addEventListener('DOMContentLoaded', () => {
+  // 1. Intercept language switcher clicks to save preferences
+  document.querySelectorAll('.lang-dropdown-item').forEach(item => {
+    item.addEventListener('click', function(e) {
+      var selectedLang = this.getAttribute('data-lang');
+      if (selectedLang) {
+        localStorage.setItem('preferred_language', selectedLang);
+      }
+    });
+  });
+
+  // 2. Mobile & Touch Toggle for Dropdown menu
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var switcher = this.closest('.lang-switcher');
+      var expanded = this.getAttribute('aria-expanded') === 'true';
+      
+      // Close other switchers
+      document.querySelectorAll('.lang-switcher').forEach(s => {
+        if (s !== switcher) {
+          s.classList.remove('open');
+          s.querySelector('.lang-btn').setAttribute('aria-expanded', 'false');
+        }
+      });
+      
+      switcher.classList.toggle('open');
+      this.setAttribute('aria-expanded', !expanded);
+    });
+  });
+
+  // 3. Close switchers when clicking outside
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.lang-switcher').forEach(s => {
+      s.classList.remove('open');
+      s.querySelector('.lang-btn').setAttribute('aria-expanded', 'false');
+    });
+  });
+});
+

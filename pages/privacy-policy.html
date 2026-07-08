@@ -7,6 +7,32 @@
   <meta name="description" content="Privacy Policy for Dattu Painting Services &mdash; Dattu Painting And Waterproofing Services, Nashik, Maharashtra." />
   <meta name="robots" content="noindex, follow" />
   <link rel="canonical" href="https://ekdantpainting.in/pages/privacy-policy.html" />
+  <link rel="alternate" hreflang="mr" href="https://ekdantpainting.in/mr/pages/privacy-policy.html" />
+  <link rel="alternate" hreflang="en" href="https://ekdantpainting.in/pages/privacy-policy.html" />
+
+  <!-- Language Auto-Detect Redirection -->
+  <script>
+    (function() {
+      var lang = localStorage.getItem('preferred_language');
+      var isMarathiPath = window.location.pathname.indexOf('/mr/') !== -1 || window.location.pathname.endsWith('/mr');
+      if (!lang) {
+        var browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+        if (browserLang.startsWith('mr')) {
+          lang = 'mr';
+        } else {
+          lang = 'en';
+        }
+        localStorage.setItem('preferred_language', lang);
+      }
+      if (lang === 'mr' && !isMarathiPath) {
+        var newPath = window.location.origin + '/mr/pages/privacy-policy.html' + window.location.hash;
+        window.location.replace(newPath);
+      } else if (lang === 'en' && isMarathiPath) {
+        var newPath = window.location.origin + '/pages/privacy-policy.html' + window.location.hash;
+        window.location.replace(newPath);
+      }
+    })();
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
   <style>
@@ -36,6 +62,18 @@
           <span class="nav-logo-tagline">Since 1999 &bull; Nashik</span>
         </span>
       </a>
+      <!-- Language Switcher -->
+      <div class="lang-switcher" role="navigation" aria-label="Language Selector" style="margin-left: auto; margin-right: 1rem;">
+        <button class="lang-btn" aria-haspopup="true" aria-expanded="false" id="lang-btn-desktop">
+          <span class="lang-flag">&#127468;&#127463;</span>
+          <span class="lang-text">English</span>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="lang-dropdown-menu" aria-labelledby="lang-btn-desktop">
+          <a href="../mr/pages/privacy-policy.html" class="lang-dropdown-item" data-lang="mr"><span class="lang-flag">&#127470;&#127475;</span> &#2350;&#2352;&#2366;&#2336;&#2368;</a>
+          <a href="./privacy-policy.html" class="lang-dropdown-item active" data-lang="en"><span class="lang-flag">&#127468;&#127463;</span> English</a>
+        </div>
+      </div>
       <a href="../index.html" class="btn btn-outline-white btn-sm">&larr; Back to Home</a>
     </nav>
   </header>
