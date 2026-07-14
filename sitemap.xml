@@ -4,62 +4,62 @@
 
   <!-- English Home -->
   <url>
-    <loc>https://ekdantpainting.in/</loc>
-    <xhtml:link rel="alternate" hreflang="mr" href="https://ekdantpainting.in/mr/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ekdantpainting.in/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ekdantpainting.in/" />
-    <lastmod>2025-06-01</lastmod>
+    <loc>https://www.ekdantpainting.studio/</loc>
+    <xhtml:link rel="alternate" hreflang="mr" href="https://www.ekdantpainting.studio/mr/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ekdantpainting.studio/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ekdantpainting.studio/" />
+    <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Marathi Home -->
   <url>
-    <loc>https://ekdantpainting.in/mr/</loc>
-    <xhtml:link rel="alternate" hreflang="mr" href="https://ekdantpainting.in/mr/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ekdantpainting.in/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ekdantpainting.in/" />
-    <lastmod>2025-06-01</lastmod>
+    <loc>https://www.ekdantpainting.studio/mr/</loc>
+    <xhtml:link rel="alternate" hreflang="mr" href="https://www.ekdantpainting.studio/mr/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ekdantpainting.studio/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ekdantpainting.studio/" />
+    <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- English Privacy Policy -->
   <url>
-    <loc>https://ekdantpainting.in/pages/privacy-policy.html</loc>
-    <xhtml:link rel="alternate" hreflang="mr" href="https://ekdantpainting.in/mr/pages/privacy-policy.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ekdantpainting.in/pages/privacy-policy.html" />
-    <lastmod>2025-06-01</lastmod>
+    <loc>https://www.ekdantpainting.studio/pages/privacy-policy.html</loc>
+    <xhtml:link rel="alternate" hreflang="mr" href="https://www.ekdantpainting.studio/mr/pages/privacy-policy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ekdantpainting.studio/pages/privacy-policy.html" />
+    <lastmod>2026-07-09</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <!-- Marathi Privacy Policy -->
   <url>
-    <loc>https://ekdantpainting.in/mr/pages/privacy-policy.html</loc>
-    <xhtml:link rel="alternate" hreflang="mr" href="https://ekdantpainting.in/mr/pages/privacy-policy.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ekdantpainting.in/pages/privacy-policy.html" />
-    <lastmod>2025-06-01</lastmod>
+    <loc>https://www.ekdantpainting.studio/mr/pages/privacy-policy.html</loc>
+    <xhtml:link rel="alternate" hreflang="mr" href="https://www.ekdantpainting.studio/mr/pages/privacy-policy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ekdantpainting.studio/pages/privacy-policy.html" />
+    <lastmod>2026-07-09</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
-  <!-- English Terms &amp; Conditions -->
+  <!-- English Terms & Conditions -->
   <url>
-    <loc>https://ekdantpainting.in/pages/terms.html</loc>
-    <xhtml:link rel="alternate" hreflang="mr" href="https://ekdantpainting.in/mr/pages/terms.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ekdantpainting.in/pages/terms.html" />
-    <lastmod>2025-06-01</lastmod>
+    <loc>https://www.ekdantpainting.studio/pages/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="mr" href="https://www.ekdantpainting.studio/mr/pages/terms.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ekdantpainting.studio/pages/terms.html" />
+    <lastmod>2026-07-09</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
-  <!-- Marathi Terms &amp; Conditions -->
+  <!-- Marathi Terms & Conditions -->
   <url>
-    <loc>https://ekdantpainting.in/mr/pages/terms.html</loc>
-    <xhtml:link rel="alternate" hreflang="mr" href="https://ekdantpainting.in/mr/pages/terms.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ekdantpainting.in/pages/terms.html" />
-    <lastmod>2025-06-01</lastmod>
+    <loc>https://www.ekdantpainting.studio/mr/pages/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="mr" href="https://www.ekdantpainting.studio/mr/pages/terms.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ekdantpainting.studio/pages/terms.html" />
+    <lastmod>2026-07-09</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
