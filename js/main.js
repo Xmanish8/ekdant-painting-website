@@ -20,8 +20,30 @@ window.addEventListener('load', () => {
     // Trigger hero image animation
     const heroBg = document.getElementById('hero-bg');
     if (heroBg) heroBg.classList.add('loaded');
-  }, 2200);
+  }, 1500);
 });
+
+/* ============================================================
+   HERO PARALLAX EFFECT
+   ============================================================ */
+(function() {
+  const heroBg = document.getElementById('hero-bg');
+  if (!heroBg) return;
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const scrollY = window.scrollY;
+        const heroHeight = document.getElementById('hero') ? document.getElementById('hero').offsetHeight : 800;
+        if (scrollY < heroHeight) {
+          heroBg.style.transform = 'scale(1.05) translateY(' + (scrollY * 0.3) + 'px)';
+        }
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+})();
 
 /* ============================================================
    NAVBAR: SCROLL BEHAVIOUR + ACTIVE LINK
